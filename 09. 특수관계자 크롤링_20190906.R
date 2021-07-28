@@ -14,8 +14,7 @@ kospi200 <- read.csv(file='KOSPI200_web.csv')
 
 ### 파이썬에서 크롤링한 결과불러오는 함수 정의 
 python_result_read <- function(number, start, end){
-  file_link <- paste0('C:/Users/Uos/OneDrive - 서울시립대학교/key/홍익대/크롤링 관련/파이썬크롤링결과/sample', number, '.xlsx')
-  #file_link <- paste0('C:/Users/Eunyoung/OneDrive - 서울시립대학교/key/홍익대/크롤링 관련/파이썬크롤링결과/sample', number, '.xlsx')
+  file_link <- paste0('sample', number, '.xlsx')
   result_dat = list()
   for(ind in (start-1):(end-1)){
     tmp_dat <- read.xlsx(file_link, sheetName = paste0("sheet", ind), encoding = "UTF-8")
