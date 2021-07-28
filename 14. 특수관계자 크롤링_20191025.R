@@ -7,7 +7,6 @@ if(!require(zoo)){install.packages('zoo')}; library(zoo)
 if(!require(xlsx)){install.package('xlsx')}; library(xlsx)
 if(!require(data.table)){install.package('data.table')}; library(data.table)
 
-
 kospi200 <- read.csv(file='KOSPI200_web.csv')
 alpha_code <- read.csv(file='world_alphabetic_code.csv')
 alpha_code <- as.character(alpha_code[,3])
