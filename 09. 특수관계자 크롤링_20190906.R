@@ -7,8 +7,6 @@ if(!require(zoo)){install.packages('zoo')}; library(zoo)
 if(!require(xlsx)){install.package('xlsx')}; library(xlsx)
 if(!require(data.table)){install.package('data.table')}; library(data.table)
 
-
-# kospi200 <- read.csv(file='KOSPI200_web.csv')
 kospi200 <- read.csv(file='KOSPI200_web.csv')
 
 
@@ -25,8 +23,6 @@ python_result_read <- function(number, start, end){
     colnames(tmp_dat) <- as.character(tmp_dat[1,])
     result_dat[[(ind-start+2)]] <- tmp_dat[-1,]
   }
-  
-  
   
   return(result_dat)
 }
