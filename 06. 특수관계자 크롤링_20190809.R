@@ -8,7 +8,6 @@ if(!require(xlsx)){install.package('xlsx')}; library(xlsx)
 
 ### url 불러오기
 kospi200 <- read.csv(file='KOSPI200_web.csv')
-#kospi200 <- read.csv(file='KOSPI200_web.csv')
 ### 현재수준 정의 가능 회사number: 1~5, 61, 96, (6~10)
 
 ############################## 1. 필요한 함수 정의 ##################################
