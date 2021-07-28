@@ -8,7 +8,6 @@ if(!require(xlsx)){install.package('xlsx')}; library(xlsx)
 
 ### url 불러오기
 kospi200 <- read.csv(file='KOSPI200_web.csv')
-#kospi200 <- read.csv(file='KOSPI200_web.csv')
 
 
 ############################## step 1. 필요한 함수 정의 ##################################
