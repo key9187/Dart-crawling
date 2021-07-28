@@ -7,27 +7,20 @@ if(!require(zoo)){install.packages('zoo')}; library(zoo)
 if(!require(xlsx)){install.package('xlsx')}; library(xlsx)
 if(!require(data.table)){install.package('data.table')}; library(data.table)
 
-
 kospi200 <- read.csv(file='KOSPI200_web.csv')
-# kospi200 <- read.csv(file='KOSPI200_web.csv')
-
 
 ############################## step 1. 필요한 함수 정의 ##################################
 
 ### 파이썬에서 크롤링한 결과불러오는 함수 정의 
 python_result_read <- function(number, start, end){
   file_link <- paste0('sample', number, '.xlsx')
-  # file_link <- paste0('sample', number, '.xlsx')
   result_dat = list()
   for(ind in (start-1):(end-1)){
     tmp_dat <- read.xlsx(file_link, sheetName = paste0("sheet", ind), encoding = "UTF-8")
     tmp_dat <-  as.data.frame(lapply(tmp_dat, as.character), stringsAsFactors = F)
     colnames(tmp_dat) <- as.character(tmp_dat[1,])
     result_dat[[(ind-start+2)]] <- tmp_dat[-1,]
-  }
-  
-  
-  
+  }    
   return(result_dat)
 }
 
