@@ -6,7 +6,6 @@ if(!require(reshape2)){install.packages('reshape2')}; library(reshape2)
 if(!require(zoo)){install.packages('zoo')}; library(zoo)
 
 ### url 불러오기
-#kospi200 <- read.csv(file='KOSPI200_web.csv')
 kospi200 <- read.csv(file='KOSPI200_web.csv')
 
 
