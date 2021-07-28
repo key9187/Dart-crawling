@@ -7,7 +7,6 @@ if(!require(zoo)){install.packages('zoo')}; library(zoo)
 if(!require(xlsx)){install.package('xlsx')}; library(xlsx)
 
 ### url 불러오기
-#kospi200 <- read.csv(file='KOSPI200_web.csv')
 kospi200 <- read.csv(file='KOSPI200_web.csv')
 
 
